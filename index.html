@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Ildefonso Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <style>
+    /* Remove old inline styles, now using Tailwind */
+    @media (max-width: 640px) {
+      #sidebarNav {
+        /* Remove forced height so mobileSidebar can be full height */
+        /* height: 56px !important; */
+        /* min-height: 56px !important; */
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      #mobileSidebar {
+        height: 100vh !important;
+        min-height: 100vh !important;
+      }
+      #mobileSidebarOverlay {
+        /* Overlay fade handled by Tailwind classes */
+      }
+      #mobileNavLinks {
+        display: none !important;
+      }
+    }
+    @keyframes slideDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide-down {
+      animation: slideDown 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-[#F9FAFB] min-h-screen overflow-x-hidden dark:bg-[#0F172A]">
+  <div id="app" class="w-full min-h-screen p-0 sm:p-2 lg:p-4 flex flex-col lg:flex-row justify-center items-stretch">
+    <!-- Sidebar Navigation -->
+    <nav class="lg:w-72 w-full bg-[#FFFFFF] shadow-2xl flex flex-row lg:flex-col items-center lg:items-stretch p-2 lg:py-12 lg:px-8 gap-2 lg:gap-6 z-20 fixed lg:fixed top-0 left-0 lg:h-screen h-16 transition-all duration-300 border-r border-[#E5E7EB] dark:bg-[#1E293B] dark:border-[#334155] backdrop-blur-md" id="sidebarNav">
+      <!-- Profile section for large screens -->
+      <div class="hidden lg:flex flex-col items-center mb-8">
+        <img src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Profile" class="w-28 h-28 rounded-full border-4 border-[#10B981] shadow-lg mb-4 dark:border-[#22C55E] transition-transform duration-300 hover:scale-105">
+        <h2 class="text-2xl font-extrabold text-[#1F2937] dark:text-[#F1F5F9] tracking-tight">Michael Ildefonso</h2>
+        <p class="text-base text-[#4B5563] text-center mt-1 dark:text-[#94A3B8]">Web Developer & Designer</p>
+        <div class="flex gap-3 mt-4">
+          <a href="#" target="_blank" class="text-[#2563EB] hover:text-[#10B981] dark:text-[#3B82F6] dark:hover:text-[#22C55E] transition-transform duration-200 hover:scale-110" aria-label="GitHub"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .267.18.577.688.48C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg></a>
+          <a href="#" target="_blank" class="text-[#2563EB] hover:text-[#10B981] dark:text-[#3B82F6] dark:hover:text-[#22C55E] transition-transform duration-200 hover:scale-110" aria-label="Twitter"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 5.924c-.793.352-1.645.59-2.54.698a4.48 4.48 0 0 0 1.963-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 16.11 4c-2.48 0-4.49 2.014-4.49 4.5 0 .353.04.697.116 1.025C7.728 9.37 4.1 7.6 1.67 4.905c-.387.664-.61 1.437-.61 2.26 0 1.56.793 2.936 2.003 3.744-.736-.023-1.428-.226-2.034-.563v.057c0 2.18 1.548 4.002 3.6 4.418-.377.104-.775.16-1.186.16-.29 0-.568-.028-.84-.08.57 1.77 2.22 3.06 4.18 3.09A9.01 9.01 0 0 1 2 19.54a12.73 12.73 0 0 0 6.92 2.03c8.3 0 12.84-6.872 12.84-12.84 0-.196-.004-.392-.013-.586A9.22 9.22 0 0 0 24 4.59a8.98 8.98 0 0 1-2.54.697z"/></svg></a>
+          <a href="#" target="_blank" class="text-[#2563EB] hover:text-[#10B981] dark:text-[#3B82F6] dark:hover:text-[#22C55E] transition-transform duration-200 hover:scale-110" aria-label="LinkedIn"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.966 0-1.75-.79-1.75-1.75s.784-1.75 1.75-1.75 1.75.79 1.75 1.75-.784 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/></svg></a>
+        </div>
+      </div>
+      <button class="lg:hidden ml-2 mt-2 text-2xl text-[#2563EB] focus:outline-none" id="hamburgerBtn" aria-label="Open navigation">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div class="hidden lg:flex flex-col w-full gap-4 mt-8" id="navLinks">
+        <a href="#home" class="block w-full px-4 py-2 text-lg font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition text-center dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Home</a>
+        <a href="#about" class="block w-full px-4 py-2 text-lg font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition text-center dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">About</a>
+        <a href="#projects" class="block w-full px-4 py-2 text-lg font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition text-center dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Projects</a>
+        <a href="#contact" class="block w-full px-4 py-2 text-lg font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition text-center dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Contact</a>
+      </div>
+      <!-- Mobile nav links -->
+      <div class="lg:hidden fixed top-16 left-0 w-full bg-[#FFFFFF] dark:bg-[#1E293B] shadow-2xl flex-col gap-2 p-4 z-30 hidden rounded-b-2xl border-b border-[#E5E7EB] dark:border-[#334155] transition-all duration-300 animate-slide-down" id="mobileNavLinks">
+        <a href="#home" class="block w-full px-4 py-3 text-base font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition text-center dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Home</a>
+        <a href="#about" class="block w-full px-4 py-3 text-base font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition text-center dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">About</a>
+        <a href="#projects" class="block w-full px-4 py-3 text-base font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition text-center dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Projects</a>
+        <a href="#contact" class="block w-full px-4 py-3 text-base font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition text-center dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Contact</a>
+      </div>
+      <!-- Slide-in Mobile Sidebar Nav -->
+      <div id="mobileSidebarOverlay" class="lg:hidden fixed inset-0 bg-black/40 z-40 hidden transition-opacity duration-300"></div>
+      <aside id="mobileSidebar" class="lg:hidden fixed top-0 left-0 h-full w-1/2 bg-[#FFFFFF] dark:bg-[#1E293B] shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 flex flex-col p-6 gap-4 border-r border-[#E5E7EB] dark:border-[#334155]">
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xl font-bold text-[#1F2937] dark:text-[#F1F5F9]">Menu</span>
+          <button id="closeSidebarBtn" class="text-2xl text-[#2563EB] dark:text-[#3B82F6] focus:outline-none" aria-label="Close navigation">&times;</button>
+        </div>
+        <a href="#home" class="block px-4 py-3 text-base font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Home</a>
+        <a href="#about" class="block px-4 py-3 text-base font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">About</a>
+        <a href="#projects" class="block px-4 py-3 text-base font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Projects</a>
+        <a href="#contact" class="block px-4 py-3 text-base font-semibold text-[#1F2937] hover:bg-[#10B981]/10 hover:text-[#10B981] rounded-xl transition dark:text-[#F1F5F9] dark:hover:bg-[#22C55E]/10 dark:hover:text-[#22C55E]">Contact</a>
+      </aside>
+      <!-- End Slide-in Mobile Sidebar Nav -->
+      <!-- Dark mode toggle button -->
+      <button id="darkModeToggle" class="absolute top-4 right-4 lg:static lg:self-end mb-4 lg:mb-0 p-2 rounded-full bg-[#E5E7EB] hover:bg-[#10B981]/20 text-[#2563EB] dark:bg-[#334155] dark:text-[#3B82F6] dark:hover:bg-[#22C55E]/20 dark:hover:text-[#22C55E] transition" aria-label="Toggle dark mode">
+        <svg id="darkModeIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path id="sunIcon" class="block" stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-8.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.95 7.07l-.71-.71M4.05 4.93l-.71-.71M12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10z"/>
+          <path id="moonIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+      </button>
+    </nav>
+    <!-- Main Content -->
+    <div class="flex-1 w-full lg:ml-64 bg-[#F9FAFB] p-2 sm:p-4 md:p-8 lg:p-12 xl:p-20 2xl:p-28 rounded-none shadow-none flex flex-col dark:bg-[#0F172A] dark:text-[#F1F5F9] min-h-screen">
+      <section id="home" class="w-full flex flex-col justify-center items-center min-h-[40vh] pt-4 pb-4 sm:pt-8 sm:pb-8 lg:min-h-[20vh] lg:pt-4 lg:pb-4 animate-fade-in text-center">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl font-bold mb-2 text-[#1F2937] dark:text-[#F1F5F9]">Michael Ildefonso</h1>
+        <p class="text-[#4B5563] text-base sm:text-lg lg:text-xl 2xl:text-2xl dark:text-[#94A3B8]">Welcome to my portfolio! I am a passionate developer specializing in modern web technologies.</p>
+      </section>
+      <hr class="my-8 border-t-2 border-[#E5E7EB] dark:border-[#334155] w-full max-w-4xl mx-auto">
+      <section id="about" class="mt-0 flex-1 animate-fade-in delay-100">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-semibold mb-2 text-[#1F2937] dark:text-[#F1F5F9]">About Me</h1>
+        <p class="text-[#4B5563] text-base sm:text-lg lg:text-xl 2xl:text-2xl dark:text-[#94A3B8]">I am a software developer with experience in Vue, JavaScript, and more. I love building interactive web applications and learning new technologies.</p>
+      </section>
+      <hr class="my-8 border-t-2 border-[#E5E7EB] dark:border-[#334155] w-full max-w-4xl mx-auto">
+      <section id="skills" class="mt-0 flex-1 animate-fade-in delay-200">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-semibold mb-2 text-[#1F2937] dark:text-[#F1F5F9]">Skills</h1>
+        <ul class="space-y-4">
+          <li><strong>Languages:</strong>
+            <div class="mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div>
+                <span>JavaScript</span>
+                <div class="w-full bg-[#E5E7EB] rounded h-2.5 mt-1">
+                  <div class="bg-[#10B981] h-2.5 rounded transition-all duration-500" style="width:90%"></div>
+                </div>
+                <span class="text-xs text-[#4B5563] dark:text-[#94A3B8]">90%</span>
+              </div>
+              <div>
+                <span>HTML</span>
+                <div class="w-full bg-[#E5E7EB] rounded h-2.5 mt-1">
+                  <div class="bg-[#10B981] h-2.5 rounded transition-all duration-500" style="width:95%"></div>
+                </div>
+                <span class="text-xs text-[#4B5563] dark:text-[#94A3B8]">95%</span>
+              </div>
+              <div>
+                <span>CSS</span>
+                <div class="w-full bg-[#E5E7EB] rounded h-2.5 mt-1">
+                  <div class="bg-[#10B981] h-2.5 rounded transition-all duration-500" style="width:85%"></div>
+                </div>
+                <span class="text-xs text-[#4B5563] dark:text-[#94A3B8]">85%</span>
+              </div>
+              <div>
+                <span>Python</span>
+                <div class="w-full bg-[#E5E7EB] rounded h-2.5 mt-1">
+                  <div class="bg-[#10B981] h-2.5 rounded transition-all duration-500" style="width:70%"></div>
+                </div>
+                <span class="text-xs text-[#4B5563] dark:text-[#94A3B8]">70%</span>
+              </div>
+            </div>
+          </li>
+          <li><strong>Frameworks:</strong> <span class="block sm:inline text-[#1F2937] dark:text-[#F1F5F9]">Vue.js, React, Node.js</span></li>
+          <li><strong>Databases:</strong> <span class="block sm:inline text-[#1F2937] dark:text-[#F1F5F9]">MySQL, MongoDB, SQLite</span></li>
+          <li><strong>Tools:</strong> <span class="block sm:inline text-[#1F2937] dark:text-[#F1F5F9]">Git, VS Code, Webpack</span></li>
+          <li><strong>Other:</strong> <span class="block sm:inline text-[#1F2937] dark:text-[#F1F5F9]">Responsive Design, REST APIs, Agile Development</span></li>
+        </ul>
+      </section>
+      <hr class="my-8 border-t-2 border-[#E5E7EB] dark:border-[#334155] w-full max-w-4xl mx-auto">
+      <section id="projects" class="mt-0 flex-1 animate-fade-in delay-300">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-semibold mb-2 text-[#1F2937] dark:text-[#F1F5F9]">Projects</h1>
+        <ul class="list-disc list-inside space-y-4 sm:space-y-1 sm:pl-6">
+          <li><strong>Project One:</strong> <span class="block sm:inline text-[#4B5563] dark:text-[#94A3B8]">Description of project one.</span></li>
+          <li><strong>Project Two:</strong> <span class="block sm:inline text-[#4B5563] dark:text-[#94A3B8]">Description of project two.</span></li>
+          <li><strong>Project Three:</strong> <span class="block sm:inline text-[#4B5563] dark:text-[#94A3B8]">Description of project three.</span></li>
+        </ul>
+      </section>
+      <hr class="my-8 border-t-2 border-[#E5E7EB] dark:border-[#334155] w-full max-w-4xl mx-auto">
+      <section id="contact" class="mt-0 flex-1 animate-fade-in delay-400">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-semibold mb-2 text-[#1F2937] dark:text-[#F1F5F9]">Contact</h1>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+          <p class="text-[#1F2937] break-all dark:text-[#F1F5F9]">Email: <a href="mailto:michael@example.com" class="text-[#10B981] dark:text-[#22C55E] hover:underline">michael@example.com</a></p>
+          <p class="text-[#1F2937] mt-2 sm:mt-0 dark:text-[#F1F5F9]">LinkedIn: <a href="#" target="_blank" class="text-[#10B981] dark:text-[#22C55E] hover:underline">linkedin.com/in/michael</a></p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script>
+    // Hamburger menu toggle for slide-in sidebar
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const mobileSidebarOverlay = document.getElementById('mobileSidebarOverlay');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+    function openSidebar() {
+      mobileSidebar.classList.remove('-translate-x-full');
+      mobileSidebarOverlay.classList.remove('hidden');
+      setTimeout(() => mobileSidebarOverlay.classList.add('opacity-100'), 10);
+    }
+    function closeSidebar() {
+      mobileSidebar.classList.add('-translate-x-full');
+      mobileSidebarOverlay.classList.add('hidden');
+      mobileSidebarOverlay.classList.remove('opacity-100');
+    }
+    hamburgerBtn && hamburgerBtn.addEventListener('click', openSidebar);
+    closeSidebarBtn && closeSidebarBtn.addEventListener('click', closeSidebar);
+    mobileSidebarOverlay && mobileSidebarOverlay.addEventListener('click', closeSidebar);
+    // Hide sidebar on nav link click
+    document.querySelectorAll('#mobileSidebar a').forEach(link => {
+      link.addEventListener('click', closeSidebar);
+    });
+    // Hide old mobile nav links
+    const mobileNavLinks = document.getElementById('mobileNavLinks');
+    if (mobileNavLinks) mobileNavLinks.style.display = 'none';
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const html = document.documentElement;
+
+    function setDarkMode(enabled) {
+      if (enabled) {
+        html.classList.add('dark');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.classList.remove('dark');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+    // Initial theme
+    const userPref = localStorage.getItem('theme');
+    if (userPref === 'dark' || (userPref === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+    darkModeToggle.addEventListener('click', () => {
+      setDarkMode(!html.classList.contains('dark'));
+    });
+  </script>
+</body>
+</html>
